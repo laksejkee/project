@@ -1,12 +1,10 @@
 package ParserFile.Service;
 
-import ParserFile.Service.CheckingTheFileService;
-import ParserFile.Service.DirectoryWatcherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
+//почему тут пробел???
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -15,8 +13,8 @@ public class FileLoader implements CommandLineRunner {
     @Value("${file.path}")
     private String path;
 
-    @Autowired
-    CheckingTheFileService checkingTheFileServis;
+    @Autowired //почему подчеркнут?
+    CheckingTheFileService checkingTheFileService; //почему горит зеленым? я все починил
     @Autowired
     DirectoryWatcherService directoryWatcherService;
 
@@ -25,7 +23,7 @@ public class FileLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Path folderPath = Paths.get(path);
         //запускает поиск файла
-        checkingTheFileServis.checkAllFilesInDirectory(folderPath);
+        checkingTheFileService.checkAllFilesInDirectory(folderPath);
         // поступил ли новый файл
         directoryWatcherService.watсhInDirectory(folderPath);
     }

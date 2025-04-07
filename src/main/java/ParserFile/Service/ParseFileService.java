@@ -2,7 +2,9 @@ package ParserFile.Service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
+/**
+ * импорты не используются
+ */
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -13,7 +15,7 @@ public class ParseFileService {
     public Map<String, String> parseFile(Path path)  {
         Map<String, String> result = new HashMap<>();
         try {
-            Files.lines(path)
+            Files.lines(path) //почему горит желытм?
                     .filter(line -> line.contains(":"))
                     .forEach(line -> {
                         String[] parts = line.split(":");
@@ -24,7 +26,7 @@ public class ParseFileService {
                         }
                     });
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e); //сообщение об ошибке
         }
         return result;
     }

@@ -8,12 +8,16 @@ import ParserFile.dto.FileDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+//тут пробел
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
 
+/**
+ * внедрение через поля
+ * модификаторы доступа
+ */
 @Service
 @RequiredArgsConstructor
 public class FileService {
@@ -35,7 +39,7 @@ public class FileService {
                 fileRepository.save(entity);
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e); //сообщение об ошибке
         }
     }
 

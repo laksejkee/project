@@ -6,6 +6,11 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.nio.file.*;
+/**
+ * импорты раскрыть
+ * TODO внедрение через поля - плохо
+ * подумай над логикой
+ */
 @Service
 @RequiredArgsConstructor
 public class DirectoryWatcherService {

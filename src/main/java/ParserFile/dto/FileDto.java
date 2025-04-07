@@ -1,13 +1,13 @@
 package ParserFile.dto;
+/**
+ * все импорты, которые не используются почистить
+ * почему класс горит желтым?(аннотация)
+ * все звездочки в импорте раскрыть
+ * почитать про рекорды
+ */
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.*;
-import lombok.experimental.FieldNameConstants;
-import org.springframework.stereotype.Component;
-import org.springframework.web.multipart.MultipartFile;
-
+import lombok.Data;
 import java.time.LocalDate;
-import java.util.List;
 @Data
 public class FileDto {
    private String firstname;

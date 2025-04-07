@@ -4,6 +4,12 @@ import ParserFile.Entity.FileEntity;
 import ParserFile.dto.FileDto;
 import org.springframework.stereotype.Component;
 
+/**
+ * название метода переделать mapToEntity и тому подобное
+ * почему object , подумай, переделай
+ * почитай про функциональные интерфейсы
+ * все говно
+ */
 @Component
 public class FileMapperToEntity implements Mapper<FileDto, FileEntity>{
     @Override

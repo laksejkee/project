@@ -14,6 +14,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * ИМПОРТЫ НЕ ИСПОЛЬЗУЮТСЯ, УДАЛЯЙ!!!!
+ * опять метод map, переделай имя!!!
+ * модификаторы доступа
+ */
 @Component
 public class FileReadMapper implements Mapper<Map<String, String>, FileDto> {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");

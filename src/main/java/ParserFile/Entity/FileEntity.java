@@ -4,7 +4,12 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+/**
+ * звездочка в импорте раскрыть
+ * починить ламбок, убрать хардкод
+ * FileEntity название класса подумать получше
+ * название таблицы переделать, все неправильно
+ */
 import java.time.LocalDate;
 
 @Data
