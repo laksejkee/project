@@ -9,6 +9,10 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import java.time.LocalDate;
 
+/**
+ * Переименовать в соответствии с:
+ * {@link parserFile.dto.PassportDataDto}
+ */
 @Data
 @Entity
 @Table(name = "passport_date")

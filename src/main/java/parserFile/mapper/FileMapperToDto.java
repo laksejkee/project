@@ -6,6 +6,9 @@ import parserFile.utils.DateFormatters;
 import java.time.LocalDate;
 import java.util.function.Function;
 
+/**
+ * FileMapper - переименовать
+ */
 @Component
 public class FileMapperToDto implements Function<String[], PassportDataDto> {
 
