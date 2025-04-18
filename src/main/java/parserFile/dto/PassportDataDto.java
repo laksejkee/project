@@ -13,6 +13,5 @@ public record PassportDataDto(String firstname,
                               LocalDate subdivisionCode,
                               Long unitCode
 
-) {
-}
+){}
 

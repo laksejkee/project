@@ -1,10 +1,10 @@
- file:
+file:
   path: Files
 
- spring:
-   datasource:
-     url: jdbc:postgresql://localhost:5252/db_data
-     username: postgres
-     password: 123
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5252/db_data
+    username: postgres
+    password: 123
 
 
