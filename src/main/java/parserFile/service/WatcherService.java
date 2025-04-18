@@ -2,8 +2,7 @@ package parserFile.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import parserFile.service.chekingDirectoryOnTheFile.CsvFileScanner;
-import parserFile.service.chekingDirectoryOnTheFile.XlsxFileScanner;
+
 import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;

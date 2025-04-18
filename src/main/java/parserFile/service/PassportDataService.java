@@ -16,6 +16,8 @@ public class PassportDataService {
     private final PassportRepository fileRepository;
 
     public void saveToDatabase(String[] data) {
+        //Антипаттерн - названия методов ничего не значат
+        //Понимание того, что делают методы приходит только от названия классов - это неправильно
         PassportDataDto fileDto = fileMapperToDto.apply(data);
         PassportEntity map = dtoMapperToEntity.apply(fileDto);
         fileRepository.save(map);

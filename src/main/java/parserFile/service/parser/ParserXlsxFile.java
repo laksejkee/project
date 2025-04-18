@@ -1,4 +1,4 @@
-package parserFile.service.parsingFiles;
+package parserFile.service.parser;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,13 +13,18 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Path;
 
+
+/**
+ * TODO: Мне не нравится что вызов дао-слоя происходит из парсера.
+ * Ответсвенность парсера - принимать на вход данные одного типа, и возврашать данные целевого типа.
+ */
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class ParserXlsxFile implements Fileparser {
+public class ParserXlsxFile implements FileParser {
     private final PassportDataService fileService;
     private final XlsxDataMapperToString xlsxDataMapperToString;
-
+    //TODO: Запилить умную валидация hibernate.validation.api
     public void parseFile(Path path) {
         try (FileInputStream fis = new FileInputStream(path.toString())) {
             Workbook workbook = WorkbookFactory.create(fis);

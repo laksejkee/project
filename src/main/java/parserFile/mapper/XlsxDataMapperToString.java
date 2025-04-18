@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import parserFile.utils.ExcelDateUtil;
 import java.util.function.Function;
 
+//Перенести специфичную для файла логику в класс обработчик этого типа файлов
 @Component
 public class XlsxDataMapperToString implements Function<Row, String[]> {
 

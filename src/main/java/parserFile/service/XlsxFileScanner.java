@@ -1,9 +1,9 @@
-package parserFile.service.chekingDirectoryOnTheFile;
+package parserFile.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import parserFile.service.parsingFiles.ParserXlsxFile;
+import parserFile.service.parser.ParserXlsxFile;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
