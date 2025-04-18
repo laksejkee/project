@@ -1,3 +1,4 @@
+DROP TABLE if EXISTS passport_date CASCADE;
 CREATE TABLE passport_date
 (
     id         BIGSERIAL PRIMARY KEY ,
@@ -12,5 +13,3 @@ CREATE TABLE passport_date
     subdivision_code DATE NOT NULL,
     unit_code BIGINT NOT NULL
 );
-
-DROP TABLE passport_date;

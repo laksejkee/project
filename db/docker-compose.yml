@@ -8,3 +8,5 @@ services:
       - POSTGRES_DB=db_data
     ports:
       - "5252:5432"
+    volumes:
+      - ./entrypoint:/docker-entrypoint-initdb.d

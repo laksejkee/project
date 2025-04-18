@@ -1,5 +1,5 @@
  file:
-  path: C:\Users\Евгений\IdeaProjects\demo\Parsing-the-file\Files
+  path: Files
 
  spring:
    datasource:

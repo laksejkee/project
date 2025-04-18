@@ -7,9 +7,8 @@
 Если же файлов с таким расщирение нет, то ничего не происходит и программа будет ждать на появление таких файлов.
 Если в папке существуют файлы с другими расширениями, то программа никак не реагирует на них.</ul>
 
-```shell
-docker build -t parsing-the-file-db_data-1  
-docker run -d -p 5252:5432 parsing-the-file-db_data-1    
+```bash
+docker-compose -f docker-compose.yml up -d
 ```
 
 
