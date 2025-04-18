@@ -1,3 +1,10 @@
  file:
-  path: C:\Users\nikva\OneDrive\Рабочий стол\java projects\project\Files
+  path: C:\Users\Евгений\IdeaProjects\demo\Parsing-the-file\Files
+
+ spring:
+   datasource:
+     url: jdbc:postgresql://localhost:5252/db_data
+     username: postgres
+     password: 123
+
 
