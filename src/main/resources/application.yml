@@ -7,4 +7,11 @@ spring:
     username: postgres
     password: 123
 
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/migration/db.changelog-1.sql
+
+
+
 
