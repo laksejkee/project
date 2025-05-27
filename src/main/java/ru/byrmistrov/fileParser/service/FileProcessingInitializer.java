@@ -15,7 +15,6 @@ import java.util.stream.Stream;
 public class FileProcessingInitializer implements CommandLineRunner {
     @Value("${file.path}")
     private String path;
-
     private final PassportDataService passportDataService;
     private final WatcherService watcherService;
 

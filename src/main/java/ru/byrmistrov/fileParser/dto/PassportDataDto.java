@@ -43,7 +43,7 @@ public record PassportDataDto(
         @NotBlank(message = " 'Код подразделения' не может быть пустым")
         @Pattern(regexp = "\\d{3}-\\d{3}", message = " 'Код подразделения' должен быть в формате xxx-xxx")
         String unitCode
-) implements Mark {
+) implements  Mark{
     @Override
     public String getPassportNumber() {
         return passportNumber;

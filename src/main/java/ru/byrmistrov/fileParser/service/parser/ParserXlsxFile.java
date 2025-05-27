@@ -5,8 +5,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.byrmistrov.fileParser.dto.Mark;
 import ru.byrmistrov.fileParser.dto.PassportDataDtoPojo;
-import ru.byrmistrov.fileParser.service.converter.IntegerConverterXlsx;
-import ru.byrmistrov.fileParser.service.converter.LocalDateConverterXlsx;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,8 +18,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ParserXlsxFile implements FileParser {
     private final ValidatorsXlsx passportDataValidatorsXlsx;
-    private final LocalDateConverterXlsx localDateConverter;
-    private final IntegerConverterXlsx integerConverter;
 
 
     @Override
@@ -29,8 +25,6 @@ public class ParserXlsxFile implements FileParser {
         try (InputStream inputStream = Files.newInputStream(path)) {
 
             return EasyExcel.read(inputStream)
-                    .registerConverter(localDateConverter)
-                    .registerConverter(integerConverter)
                     .head(PassportDataDtoPojo.class)
                     .sheet()
                     .registerReadListener(passportDataValidatorsXlsx)
