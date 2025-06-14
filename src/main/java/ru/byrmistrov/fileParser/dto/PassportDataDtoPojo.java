@@ -12,7 +12,7 @@ import ru.byrmistrov.fileParser.service.converter.LocalDateConverterXlsx;
 import java.time.LocalDate;
 
 @Data
-public class PassportDataDtoPojo implements Mark {
+public class PassportDataDtoPojo implements HasPassportNumber {
     @NotBlank(message = " 'Имя' не может быть пустым")
     @ExcelProperty("Имя")
     private String firstname;

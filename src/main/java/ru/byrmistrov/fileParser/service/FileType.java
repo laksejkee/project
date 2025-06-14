@@ -16,7 +16,6 @@ public enum FileType {
     public String getValue() {
         return value;
     }
-
     public static Optional<FileType> getExtension(Path path) {
         String FileName = path.getFileName().toString();
         String extension = FilenameUtils.getExtension(FileName);

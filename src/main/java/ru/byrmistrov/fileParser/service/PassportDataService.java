@@ -3,7 +3,7 @@ package ru.byrmistrov.fileParser.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import ru.byrmistrov.fileParser.dto.Mark;
+import ru.byrmistrov.fileParser.dto.HasPassportNumber;
 import ru.byrmistrov.fileParser.entity.PassportDataEntity;
 import ru.byrmistrov.fileParser.mapper.PassportDataMapper;
 import ru.byrmistrov.fileParser.repository.PassportRepository;
@@ -21,7 +21,7 @@ public class PassportDataService {
 
     public void saveToDatabase(Path filePath) {
 
-        List<? extends Mark> marks = fileScanner.parseFile(filePath);
+        List<? extends HasPassportNumber> marks = fileScanner.parseFile(filePath);
         List<PassportDataEntity> entity = passportDataMapper.toEntity(marks);
         passportRepository.saveAll(entity);
     }

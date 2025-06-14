@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import ru.byrmistrov.fileParser.dto.Mark;
+import ru.byrmistrov.fileParser.dto.HasPassportNumber;
 import ru.byrmistrov.fileParser.service.FileScanner;
 
 import java.io.IOException;
@@ -35,7 +35,7 @@ public class FilesScheduler {
                 try {
                     boolean shouldDelete = fileScanner.parseFile(file)
                             .stream()
-                            .map(Mark::getPassportNumber)
+                            .map(HasPassportNumber::getPassportNumber)
                             .anyMatch(allPassportNumbers::contains);
 
                     if (shouldDelete) {

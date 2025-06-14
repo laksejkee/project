@@ -3,7 +3,7 @@ package ru.byrmistrov.fileParser.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import ru.byrmistrov.fileParser.dto.Mark;
+import ru.byrmistrov.fileParser.dto.HasPassportNumber;
 import ru.byrmistrov.fileParser.service.parser.FileParser;
 
 import java.nio.file.Path;
@@ -18,7 +18,7 @@ public class FileScanner {
 
     private final Map<String, FileParser> parserMap;
 
-    public List<? extends Mark> parseFile(Path filePath) {
+    public List<? extends HasPassportNumber> parseFile(Path filePath) {
         FileParser fileParser = FileType.getExtension(filePath)
                 .flatMap(fileType -> Optional.ofNullable(parserMap.get(fileType.getValue())))
                 .orElseThrow(() -> new RuntimeException(" Не найден парсер для файла: " + filePath));

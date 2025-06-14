@@ -3,7 +3,7 @@ package ru.byrmistrov.fileParser.service.parser;
 import com.alibaba.excel.EasyExcel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.byrmistrov.fileParser.dto.Mark;
+import ru.byrmistrov.fileParser.dto.HasPassportNumber;
 import ru.byrmistrov.fileParser.dto.PassportDataDtoPojo;
 
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class ParserXlsxFile implements FileParser {
 
 
     @Override
-    public List<? extends Mark> parseFile(Path path) {
+    public List<? extends HasPassportNumber> parseFile(Path path) {
         try (InputStream inputStream = Files.newInputStream(path)) {
 
             return EasyExcel.read(inputStream)

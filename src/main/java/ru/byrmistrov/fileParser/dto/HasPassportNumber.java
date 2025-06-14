@@ -1,5 +1,5 @@
 package ru.byrmistrov.fileParser.dto;
 
-public interface Mark {
+public interface HasPassportNumber {
     String getPassportNumber();
 }
