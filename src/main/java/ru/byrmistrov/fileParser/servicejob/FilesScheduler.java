@@ -21,7 +21,7 @@ import java.util.stream.Stream;
 @Slf4j
 public class FilesScheduler {
     private final FileScanner fileScanner;
-    private final NumberCache numberCache;
+    private final PassportNumberCache numberCache;
 
     @Value("${file.path}")
     private String path;

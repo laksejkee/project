@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @Service
 @EnableCaching
 @RequiredArgsConstructor
-public class NumberCache {
+public class PassportNumberCache {
     private final PassportRepository passportRepository;
 
     @Transactional
