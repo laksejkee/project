@@ -10,5 +10,5 @@ import java.util.stream.Stream;
 @Repository
 public interface PassportRepository extends JpaRepository<PassportDataEntity, Long> {
     @Query("SELECT p.passportNumber FROM PassportDataEntity p")
-    Stream<String> streamAllPassportNumbers();
+    Stream<String> allPassportNumbers();
 }

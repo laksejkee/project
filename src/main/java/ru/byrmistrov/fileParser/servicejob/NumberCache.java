@@ -19,7 +19,7 @@ public class NumberCache {
     @Transactional
     @Cacheable("passportNumbers")
     public Set<String> getAllPassportNumbers() {
-        return passportRepository.streamAllPassportNumbers()
+        return passportRepository.allPassportNumbers()
                 .collect(Collectors.toSet());
     }
 }
